@@ -19,6 +19,9 @@ color: rgb(232, 14, 14) ;
     padding-bottom: 5px;
 }
 
+.fw-ptag{
+    font-weight: 600;
+}
 .catcol{
     color: crimson;
     font-weight: bold;

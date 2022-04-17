@@ -324,18 +324,18 @@ function generateHTML(results){
   brandTag.textContent=`${result.brand}`
 
   // Creating product name Tag
-  let nameTag = document.createElement("h5");
+  let nameTag = document.createElement("h6");
   nameTag.classList.add("card-title","mb-4");
   nameTag.textContent=`${result.name}`
   
   // Creating category tag
   let pCategory = document.createElement("p");
-  pCategory.classList.add("card-title","mb-3");
+  pCategory.classList.add("card-title","mb-3","fw-ptag");
   pCategory.textContent = "category: ";
   
   // Span tag for category
  let spanTag = document.createElement("span");
- spanTag.className="fw-light";
+ spanTag.className="fw-normal";
  spanTag.textContent=`${result.category?result.category:"No data"}`;
 
 //  button for view description
