@@ -285,12 +285,16 @@ searchBtn.addEventListener("click", (e)=>{
 // get the datas from API
 
 async function fetchAPI(){
-  let baseUrl=(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${searchQuery}`);
-  let datas = await fetch(baseUrl);
+  try {
+    let datas = await fetch(`http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${searchQuery}`);
    console.log(datas)
   let fulldatas = await datas.json();
   console.log(fulldatas)
   generateHTML(fulldatas);
+  if(!response.ok) throw new Error("Failed to get the datas");
+  } catch (error) {
+    console.log(error.message);
+  }
 
 }
 
