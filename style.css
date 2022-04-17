@@ -45,6 +45,9 @@ img{
     height:550px;
 }
 
+.remove{
+    transition: active 1s ease-out;
+}
 
 @media (min-width:300px) and (max-width:800px) {
     .input-group{

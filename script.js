@@ -176,7 +176,7 @@ modCon.append(modHead,modbody,modfooter)
 // ----------------------------------------------Corosel starts here--------------------------------------------------------------
 
 let coroselCon = document.createElement("div");
-coroselCon.classList.add("container")
+coroselCon.classList.add("container","remove");
 coroselCon.innerHTML=` <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 <div class="carousel-indicators">
   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -299,7 +299,7 @@ async function fetchAPI(){
 }
 
 function generateHTML(results){
-  coroselCon.classList.remove("container");
+  coroselCon.remove();
     results.map((result)=>{
   //Creating col div
   let colDiv = document.createElement("div");
