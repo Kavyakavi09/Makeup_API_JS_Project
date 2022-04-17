@@ -272,6 +272,7 @@ searchForm.addEventListener('submit', (e) => {
   searchQuery = e.target.querySelector('input').value;
   //  console.log(searchQuery);
     fetchAPI();
+
 })
 
 //   search icon click event
@@ -279,7 +280,7 @@ searchBtn.addEventListener("click", (e)=>{
   e.preventDefault();
   searchQuery =document.querySelector('input').value;
   // console.log(searchQuery);
-   fetchAPI();
+ fetchAPI();
 })
 
 // get the datas from API
@@ -291,9 +292,9 @@ async function fetchAPI(){
   let fulldatas = await datas.json();
   console.log(fulldatas)
   generateHTML(fulldatas);
-  if(!response.ok) throw new Error("Failed to get the datas");
+  if(!datas.ok) throw new Error("Failed to get the datas");
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
   }
 
 }
