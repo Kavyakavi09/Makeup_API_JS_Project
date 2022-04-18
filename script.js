@@ -294,12 +294,13 @@ async function fetchAPI(){
   generateHTML(fulldatas);
   if(!datas.ok) throw new Error("Failed to get the datas");
   } catch (error) {
-    console.log(error);
+    console.log(error.message);
   }
 
 }
 
 function generateHTML(results){
+  productContainer.innerHTML="";
   coroselCon.remove();
     results.map((result)=>{
   //Creating col div
